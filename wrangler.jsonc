@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "hell-maiden",
+  "workers_dev": true,
+  "preview_urls": true,
+  "keep_vars": true,
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "routes": [
+    {
+      "pattern": "hell-maiden.wiki",
+      "custom_domain": true,
+      "zone_name": "hell-maiden.wiki"
+    },
+    {
+      "pattern": "www.hell-maiden.wiki",
+      "custom_domain": true,
+      "zone_name": "hell-maiden.wiki"
+    }
+  ],
+  "build": {
+    "command": "pnpm run cf:build"
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+}

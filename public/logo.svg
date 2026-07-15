@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Hell Maiden Wiki</title>
+  <desc id="desc">HM monogram framed by a rose-gold infernal halo.</desc>
+  <defs>
+    <linearGradient id="halo" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f6cc6b"/>
+      <stop offset="0.5" stop-color="#e89ab8"/>
+      <stop offset="1" stop-color="#8c4f96"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#0d0710"/>
+  <circle cx="32" cy="32" r="26" fill="#1a1020" stroke="url(#halo)" stroke-width="2"/>
+  <path d="M32 8c4 7 10 10 18 12-4 4-5 8-4 14-5-3-9-3-14 0-5-3-9-3-14 0 1-6 0-10-4-14 8-2 14-5 18-12Z" fill="none" stroke="#e89ab8" stroke-width="1.5" opacity=".75"/>
+  <path d="M18 44V20h6v9h8v-9h6v24h-6V34h-8v10h-6Zm22 0V20h5l5 9 5-9h5v24h-6V31l-4 7-4-7v13h-6Z" fill="#fff3fb"/>
+  <circle cx="32" cy="8" r="2.5" fill="#f6cc6b"/>
+</svg>

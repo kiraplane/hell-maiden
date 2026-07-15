@@ -1,0 +1,16 @@
+{
+  "name": "Hell Maiden Wiki",
+  "short_name": "Hell Maiden",
+  "description": "Hell Maiden Wiki with Spirit Card builds, Minos boss help, characters, release details, platform status, Steam Deck checks and safe downloads.",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#e89ab8",
+  "background_color": "#0d0710",
+  "display": "standalone"
+}
