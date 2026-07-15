@@ -1,7 +1,8 @@
 import Script from 'next/script';
 
 export default function GoogleAnalytics() {
-  const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+  const googleAnalyticsId =
+    process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-6WK0814C5Q';
 
   if (process.env.NODE_ENV !== 'production' || !googleAnalyticsId) {
     return null;
