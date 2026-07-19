@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-16';
+const checkedAt = '2026-07-17';
 
 function localVideo(
   id: string,
@@ -90,6 +90,82 @@ const videos = {
 } as const;
 
 export const guides: Guide[] = [
+  {
+    slug: 'early-access-patch-0-2-31',
+    path: '/guides/early-access-patch-0-2-31',
+    title: 'Hell Maiden Early Access Patch 0.2.31',
+    seoTitle: 'Hell Maiden Patch 0.2.31 - Fixes & Balance Changes',
+    seoDescription:
+      'See what Hell Maiden Early Access patch 0.2.31 fixes, including Libicocco progression, language settings, Virgil, Minos and a DirectX 11 launch option.',
+    summary:
+      'The first Early Access hotfix removes a Libicocco progression blocker, repairs language and visual issues, adjusts Virgil and Minos, and adds a DirectX 11 beta launch option.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-17',
+    updatedAt: '2026-07-17',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official July 16 Steam hotfix announcement for version 0.2.31.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.31 patch',
+      'Hell Maiden Early Access hotfix',
+    ],
+    tags: ['Early Access', 'Patch notes', 'Troubleshooting'],
+    relatedRoutes: [
+      '/guides/demo-vs-early-access',
+      '/guides/minos-boss-guide',
+      '/guides/poets-of-limbo',
+      '/steam-deck',
+    ],
+    body: [
+      {
+        heading: 'The progression blocker is fixed',
+        paragraphs: [
+          'Version 0.2.31 fixes a game-breaking case where progression could stop after Libicocco was defeated during her clone attack. Update and restart the game before retrying the encounter. Preserve the existing save until the next progression step has loaded successfully.',
+          'The patch also removes cases where Horace’s carriage remained on screen after use. This is a display-state fix and should not require a fresh run.',
+        ],
+      },
+      {
+        heading: 'Language and visual fixes',
+        paragraphs: [
+          'Virgil’s Ultimate splash screen no longer shows white squares in Portuguese (Portugal), and Settings tab labels should now update when the selected language changes. Players who changed language in an older session should reopen Settings after restarting the patched build.',
+          'These notes apply to the paid Early Access client. The demo is a separate Steam app and should not be assumed to share the same version number.',
+        ],
+      },
+      {
+        heading: 'Virgil and Minos balance changes',
+        paragraphs: [
+          'Virgil’s Curse card, Curse of Dido, now guarantees at least one projectile. Minos is less likely to repeat the same attack several times in quick succession, creating more variation in her pattern.',
+          'The patch changes consistency rather than replacing either system. Build advice should still prioritize a coherent damage plan and safe movement, while Minos practice should focus on reading the current sequence instead of memorizing repeated attacks from older footage.',
+        ],
+      },
+      {
+        heading: 'DirectX 11 beta for GPU crashes',
+        paragraphs: [
+          'The update adds a DirectX 11 beta launch option for players experiencing GPU crashes. Use the official Steam launch choice rather than adding unofficial command files. If DX11 helps, record the GPU model, driver version and where the original crash occurred before reporting the issue.',
+          'DirectX 11 is a troubleshooting route, not a promise of better performance on every system. Keep drivers current and return to the normal launch option if the beta path creates new visual or stability problems.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the latest Hell Maiden Early Access patch?',
+        answer:
+          'Version 0.2.31 is the first launch hotfix covered here, published on July 16, 2026.',
+      },
+      {
+        question: 'Did Hell Maiden fix the Libicocco progression bug?',
+        answer:
+          'Yes. Patch 0.2.31 fixes progression stopping after Libicocco is defeated during her clone attack.',
+      },
+      {
+        question: 'How do I try DirectX 11 in Hell Maiden?',
+        answer:
+          'Choose the DirectX 11 beta option from the official Steam launch dialog after installing patch 0.2.31.',
+      },
+    ],
+  },
   {
     slug: 'beginner-guide',
     path: '/guides/beginner-guide',

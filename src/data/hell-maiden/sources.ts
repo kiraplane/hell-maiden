@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-07-16';
+export const checkedAt = '2026-07-17';
 
 export const siteFacts = {
   siteName: 'Hell Maiden Wiki',
@@ -64,6 +64,14 @@ export const gameFacts: GameFact[] = [
 ];
 
 export const sources: DataSource[] = [
+  {
+    type: 'official',
+    label: 'Early Access Hot Fix Patch 1 (v0.2.31)',
+    url: 'https://steamcommunity.com/games/3372060/announcements/detail/1838407329257439',
+    checkedAt,
+    confidence: 'high',
+    note: 'Primary source for the Libicocco, language, Virgil, Minos, carriage and DirectX 11 beta changes.',
+  },
   {
     type: 'official',
     label: 'Hell Maiden Steam store',
