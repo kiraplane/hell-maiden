@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-17';
+const checkedAt = '2026-07-19';
 
 function localVideo(
   id: string,
@@ -90,6 +90,75 @@ const videos = {
 } as const;
 
 export const guides: Guide[] = [
+  {
+    slug: 'hotfix-0-2-32-cloud-save-achievements',
+    path: '/guides/hotfix-0-2-32-cloud-save-achievements',
+    title: 'Hell Maiden Hot Fix 0.2.32',
+    seoTitle: 'Hell Maiden Hot Fix 0.2.32 - Cloud Save & Achievement Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.32 fixes for Steam Cloud, achievements, Circle 2 map assets, settings crashes, cutscenes and Asian fonts.',
+    summary:
+      'Hot Fix 0.2.32 targets Steam Cloud, achievement unlocks, Circle 2 scenery, settings crashes, cutscene timing and missing multilingual font characters.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-19',
+    updatedAt: '2026-07-19',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official July 17 Steam Hot Fix Patch 2 notes for v0.2.32.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.32',
+      'Hell Maiden cloud save achievement fix',
+    ],
+    tags: ['Hotfix', 'Cloud save', 'Achievements'],
+    relatedRoutes: [
+      '/guides/early-access-patch-0-2-31',
+      '/guides/achievements-guide',
+      '/guides/circle-2-lust-guide',
+      '/guides/system-requirements',
+    ],
+    body: [
+      {
+        heading: 'Steam Cloud and settings stability',
+        paragraphs: [
+          'Version 0.2.32 fixes a Steam Cloud problem that could prevent progress from syncing between devices and a potential crash caused by invalid settings. Confirm the expected save on the device with the newest progress before allowing Steam to replace another local file.',
+          'The opening cinematic should no longer skip from joystick input, and the Press Any Button prompt should respond to all buttons. These changes are useful first checks when a controller appears unresponsive.',
+        ],
+      },
+      {
+        heading: 'Achievements and progression blockers',
+        paragraphs: [
+          'The patch fixes several achievement failures, including Essence of Poet IV. It also addresses a level-up occurring before a cutscene and disrupting gameplay.',
+          'Retest an affected achievement on the current build before replaying a full route. If the trigger depends on a completed action, load the closest valid save and repeat only that trigger first.',
+        ],
+      },
+      {
+        heading: 'Circle 2, Portuguese text and fonts',
+        paragraphs: [
+          'Missing map assets in Circle 2, Lust should now generate correctly. Portuguese spell splash text and missing or incorrectly bold characters in English, Japanese, Simplified Chinese and Traditional Chinese fonts were also fixed.',
+          'This is a rendering and localization patch, not a new Circle. Keep using the existing boss and build routes, then report any remaining missing asset with the room and save context.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the latest Hell Maiden hotfix?',
+        answer:
+          'Hot Fix Patch 2, version 0.2.32, was published on July 17, 2026.',
+      },
+      {
+        question: 'Does 0.2.32 fix Steam Cloud?',
+        answer:
+          'Yes. The official notes say progress can now sync between devices without the reported issue.',
+      },
+      {
+        question: 'Was Circle 2 expanded?',
+        answer:
+          'No new Circle was announced. The patch fixes map assets that failed to generate in Circle 2, Lust.',
+      },
+    ],
+  },
   {
     slug: 'early-access-patch-0-2-31',
     path: '/guides/early-access-patch-0-2-31',
