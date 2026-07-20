@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-07-19';
+export const checkedAt = '2026-07-20';
 
 export const siteFacts = {
   siteName: 'Hell Maiden Wiki',
@@ -24,7 +24,7 @@ export const siteFacts = {
   officialCoverImage: '/hell-maiden/cover.jpg',
   officialHeroImage: '/hell-maiden/hero.jpg',
   officialScreenshot: '/hell-maiden/screenshots/1.jpg',
-  officialTrailerId: 'Z43f0VYhNv8',
+  officialTrailerId: 'Gk1G2bFG_b0',
 } as const;
 
 export const siteDescription =

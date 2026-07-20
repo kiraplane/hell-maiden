@@ -102,9 +102,9 @@ export function HellMaidenHomePage({ locale }: { locale?: Locale }) {
       },
       {
         '@type': 'VideoObject',
-        name: 'Hell Maiden Release Date Trailer',
+        name: 'Hell Maiden Early Access Launch Trailer',
         thumbnailUrl: `${siteFacts.domain}/hell-maiden/guides/release.jpg`,
-        uploadDate: '2026-06-23',
+        uploadDate: '2026-07-16',
         embedUrl: `https://www.youtube-nocookie.com/embed/${siteFacts.officialTrailerId}`,
       },
       {
@@ -168,7 +168,7 @@ export function HellMaidenHomePage({ locale }: { locale?: Locale }) {
               <iframe
                 className="aspect-video w-full"
                 src={`https://www.youtube-nocookie.com/embed/${siteFacts.officialTrailerId}?rel=0`}
-                title="Official Hell Maiden release date trailer"
+                title="Official Hell Maiden Early Access launch trailer"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
