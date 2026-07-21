@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-20';
+const checkedAt = '2026-07-21';
 
 function localVideo(
   id: string,
@@ -1270,6 +1270,70 @@ export const guides: Guide[] = [
         question: 'Can I download the opening from this wiki?',
         answer:
           'No. This guide embeds or links official media and does not redistribute copyrighted audio.',
+      },
+    ],
+  },
+  {
+    slug: 'hotfix-0-2-33-directx-lust-fixes',
+    path: '/guides/hotfix-0-2-33-directx-lust-fixes',
+    title: 'Hell Maiden Hot Fix 0.2.33',
+    seoTitle: 'Hell Maiden 0.2.33 - DirectX 11, Lust and Settings Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.33 fixes for DirectX crashes, Circle 2 Lust progression, weapon damage display, controls, resolution and spell videos.',
+    summary:
+      'Hot Fix 0.2.33 makes DirectX 11 the default crash-safe launch path and repairs several Circle 2, settings, results-screen and spell-video problems.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-21',
+    updatedAt: '2026-07-21',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from AstralShift official Hot Fix Patch 3 notes for v0.2.33, published July 20.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.33',
+      'Hell Maiden Circle 2 Lust cutscene fix',
+    ],
+    tags: ['Hotfix', 'DirectX 11', 'Circle 2'],
+    relatedRoutes: [
+      '/guides/hotfix-0-2-32-cloud-save-achievements',
+      '/guides/circle-2-lust-guide',
+      '/guides/system-requirements',
+      '/guides/achievements-guide',
+    ],
+    body: [
+      {
+        heading: 'Use DirectX 11 first when the game crashes',
+        paragraphs: [
+          'Version 0.2.33 makes DirectX 11 the default launch option for players experiencing crashes, while DirectX 12 remains available. Test the default path before changing drivers, compatibility flags, or save files.',
+          'When reporting a remaining crash, include the renderer, GPU, driver version, area, and action immediately before the failure.',
+        ],
+      },
+      {
+        heading: 'Circle 2 Lust progression recovery',
+        paragraphs: [
+          'The patch fixes the missing final Lust cutscene and the Pilgrim\'s Journey I achievement. Players who already completed the boss should receive the cutscene and achievement after launching the patched game.',
+          'AstralShift notes that the repaired cutscene can still have mouse-input trouble. Use the keyboard confirm key or connect a controller if the sequence will not advance.',
+        ],
+      },
+      {
+        heading: 'Results, settings, and spell-video fixes',
+        paragraphs: [
+          'Weapon damage should no longer display as zero on the Results screen. Control remapping and the chosen resolution should persist between sessions, and the black screen after the first Lust victory has been removed.',
+          'Repeated spell videos should no longer cut off immediately, and spell-video performance received an optimization pass. Reroll menus that could only return the same result were also removed.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Should I use DirectX 11 or DirectX 12?',
+        answer:
+          'Use the new default DirectX 11 option first if you have crashes. DirectX 12 remains optional for systems where it is stable.',
+      },
+      {
+        question: 'How do I recover the Lust achievement?',
+        answer:
+          'Launch the patched game after completing Circle 2. The missing cutscene and Pilgrim\'s Journey I should trigger automatically.',
       },
     ],
   },

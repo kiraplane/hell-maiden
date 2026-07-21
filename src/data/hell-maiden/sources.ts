@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-07-20';
+export const checkedAt = '2026-07-21';
 
 export const siteFacts = {
   siteName: 'Hell Maiden Wiki',
@@ -64,6 +64,14 @@ export const gameFacts: GameFact[] = [
 ];
 
 export const sources: DataSource[] = [
+  {
+    type: 'official',
+    label: 'Hot Fix Patch 3 (v0.2.33)',
+    url: 'https://steamcommunity.com/games/3372060/announcements/detail/1838407329267425',
+    checkedAt,
+    confidence: 'high',
+    note: 'Primary July 20 source for DirectX 11 default launch, weapon-results display, Lust cutscene, settings persistence and spell-video fixes.',
+  },
   {
     type: 'official',
     label: 'Early Access Hot Fix Patch 1 (v0.2.31)',
