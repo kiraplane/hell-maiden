@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-21';
+const checkedAt = '2026-07-24';
 
 function localVideo(
   id: string,
@@ -1312,7 +1312,7 @@ export const guides: Guide[] = [
       {
         heading: 'Circle 2 Lust progression recovery',
         paragraphs: [
-          'The patch fixes the missing final Lust cutscene and the Pilgrim\'s Journey I achievement. Players who already completed the boss should receive the cutscene and achievement after launching the patched game.',
+          "The patch fixes the missing final Lust cutscene and the Pilgrim's Journey I achievement. Players who already completed the boss should receive the cutscene and achievement after launching the patched game.",
           'AstralShift notes that the repaired cutscene can still have mouse-input trouble. Use the keyboard confirm key or connect a controller if the sequence will not advance.',
         ],
       },
@@ -1333,7 +1333,78 @@ export const guides: Guide[] = [
       {
         question: 'How do I recover the Lust achievement?',
         answer:
-          'Launch the patched game after completing Circle 2. The missing cutscene and Pilgrim\'s Journey I should trigger automatically.',
+          "Launch the patched game after completing Circle 2. The missing cutscene and Pilgrim's Journey I should trigger automatically.",
+      },
+    ],
+  },
+  {
+    slug: 'hotfix-0-2-35-softlock-4k-fixes',
+    path: '/guides/hotfix-0-2-35-softlock-4k-fixes',
+    title: 'Hell Maiden Hot Fix 0.2.35',
+    seoTitle: 'Hell Maiden 0.2.35 - Softlock, 4K & Succubus Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.35 fixes for Codex Amoris, Scarmiglione black screens, card banish, stat icons, Succubus timing and optional 4K videos.',
+    summary:
+      'Hot Fix 0.2.35 is the current Early Access baseline for two progression softlocks and adds the promised optional 4K video setting.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-24',
+    updatedAt: '2026-07-24',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from AstralShift official Hot Fix Patch 5 notes for v0.2.35, published July 23.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.35',
+      'Hell Maiden Scarmiglione black screen',
+      'Hell Maiden Codex Amoris softlock',
+    ],
+    tags: ['0.2.35', 'Softlock', '4K video'],
+    relatedRoutes: [
+      '/guides/hotfix-0-2-33-directx-lust-fixes',
+      '/guides/best-builds',
+      '/guides/cards',
+      '/guides/system-requirements',
+    ],
+    body: [
+      {
+        heading: 'Retest Codex Amoris saves after updating',
+        paragraphs: [
+          'Version 0.2.35 fixes a state where Dante could return to the Forum after a run with Ovid’s Codex Amoris active and leave the player unable to move. Update and load the affected profile before abandoning the save or removing local files.',
+          'If movement remains blocked, record whether Codex Amoris was still orbiting Dante, how the prior run ended and which input device is active. That distinguishes the fixed weapon-state issue from a separate controller or save problem.',
+        ],
+      },
+      {
+        heading: 'Scarmiglione black-screen timing is repaired',
+        paragraphs: [
+          'The patch fixes a black screen during Scarmiglione’s mid-stage encounter when the player leveled up, paused or skipped immediately before the battle trigger. Avoid forcing the old timing after updating; enter the encounter normally and confirm the dialogue and combat state advance together.',
+          'Version 0.2.34 addressed related broken dialogue and black-screen states, so players coming from an older build should install the full current update rather than testing one workaround at a time.',
+        ],
+      },
+      {
+        heading: 'Visual and balance changes affect build reading',
+        paragraphs: [
+          'Card banish should no longer animate when banish is unavailable. The stats menu replaces internal-code descriptions, and the critical-rate and critical-damage icons are corrected in the metaprogression shop.',
+          'Succubus projectiles move more slowly and the attack animation is longer, creating a wider damage window. Treat pre-0.2.35 timing videos as visual references rather than exact punish timing.',
+        ],
+      },
+      {
+        heading: '4K videos are now optional',
+        paragraphs: [
+          'The settings menu now includes a 4K video toggle. Leave it off when cutscenes lag, storage is slow or the system is near minimum requirements; 1080p remains the safer playback choice.',
+          'Enabling 4K changes video presentation, not gameplay quality. A stable run and readable input timing matter more than higher-resolution cinematics.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Which patch adds the 4K video toggle?',
+        answer: 'Hot Fix 0.2.35 adds the optional setting.',
+      },
+      {
+        question: 'Does 0.2.35 fix the Codex Amoris movement lock?',
+        answer:
+          'Yes. The official notes identify and fix the Forum return state with Codex Amoris active.',
       },
     ],
   },
