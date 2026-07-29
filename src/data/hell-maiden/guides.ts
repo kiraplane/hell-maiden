@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-24';
+const checkedAt = '2026-07-29';
 
 function localVideo(
   id: string,
@@ -90,6 +90,154 @@ const videos = {
 } as const;
 
 export const guides: Guide[] = [
+  {
+    slug: 'hotfix-0-2-37-minos-level-up-menu',
+    path: '/guides/hotfix-0-2-37-minos-level-up-menu',
+    title: 'Hell Maiden Hot Fix 0.2.37',
+    seoTitle: 'Hell Maiden 0.2.37 - Minos & Level-Up Menu Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.37 fixes for Minos tentacles, the level-up card menu, missed events and Alt-Tab stability.',
+    summary:
+      'Hot Fix 0.2.37 fixes a frozen Minos tentacle in Circle 1, improves level-up card selection, restores missed events and changes Alt-Tab behavior for stability.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-29',
+    updatedAt: '2026-07-29',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official Steam Hot Fix Patch 7 notes for v0.2.37.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.37',
+      'Hell Maiden Minos tentacle fix',
+    ],
+    tags: ['Hotfix', 'Minos', 'Level-up menu'],
+    relatedRoutes: [
+      '/guides/hotfix-0-2-36-cutscene-timer-memory',
+      '/guides/minos-boss-guide',
+      '/guides/cards-and-synergies',
+      '/guides/beginner-guide',
+    ],
+    body: [
+      {
+        heading: 'Minos no longer leaves a frozen tentacle',
+        paragraphs: [
+          "Version 0.2.37 fixes a Circle 1 Limbo boss bug where one of Minos' tentacles could remain frozen in the arena. Update before another Minos attempt so the fight state and attack space match the current build.",
+          'This is a boss-behavior fix, not a new Minos pattern. Continue using movement and damage windows from the current boss guide, but stop planning around a tentacle that remains permanently stuck.',
+        ],
+      },
+      {
+        heading: 'Level-up card selection is more stable',
+        paragraphs: [
+          'The level-up card selection menu received fixes and improvements. If a card choice previously failed to respond or appeared in a broken state, retry the same run flow on 0.2.37 before changing input or display settings.',
+          'The notes do not list card balance changes. Build recommendations and card effects remain unchanged unless the game itself shows a different value.',
+        ],
+      },
+      {
+        heading: 'Missed events return and Alt-Tab no longer pauses',
+        paragraphs: [
+          'The patch restores events missed because of bugs fixed in the previous build. Load the affected save and revisit the normal event trigger before replaying an entire route.',
+          'Hell Maiden no longer pauses automatically when the application loses focus. The developer removed that behavior because stopping the engine on Alt-Tab could conflict with core systems and plugins. Pause manually before switching windows if you need the run to stop.',
+        ],
+        bullets: [
+          'Install 0.2.37 before retrying Minos or a missed event.',
+          'Pause manually before using Alt-Tab.',
+          'Retest the event trigger before deleting or replacing a save.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What does Hell Maiden 0.2.37 fix?',
+        answer:
+          'It fixes a frozen Minos tentacle, improves the level-up card menu, restores events missed by earlier bugs and removes automatic Alt-Tab pausing.',
+      },
+      {
+        question: 'Were card balance values changed?',
+        answer:
+          'The official notes mention menu fixes and improvements, not card balance changes.',
+      },
+      {
+        question: 'Does Hell Maiden pause when I Alt-Tab now?',
+        answer:
+          'No. Pause manually before switching windows if you need gameplay to stop.',
+      },
+    ],
+  },
+  {
+    slug: 'hotfix-0-2-36-cutscene-timer-memory',
+    path: '/guides/hotfix-0-2-36-cutscene-timer-memory',
+    title: 'Hell Maiden Hot Fix 0.2.36',
+    seoTitle: 'Hell Maiden 0.2.36 - Cutscene, Timer & Memory Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.36 fixes for interrupted cutscenes, cutscene achievements, the Ovid rescue timer and texture memory use.',
+    summary:
+      'Hot Fix 0.2.36 restores interrupted story events and achievements, stops the main level timer during Ovid rescue and reduces texture memory use.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-07-24',
+    updatedAt: '2026-07-28',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official Steam Hot Fix Patch 6 notes. The developer says patch frequency will slow while work shifts toward the next content update.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.36',
+      'Hell Maiden Ovid Poet Rescue fix',
+    ],
+    tags: ['Hotfix', 'Cutscenes', 'Optimization'],
+    relatedRoutes: [
+      '/guides/hotfix-0-2-35-softlock-4k-fixes',
+      '/guides/hotfix-0-2-33-directx-lust-fixes',
+      '/guides/minos-boss-guide',
+      '/guides/beginner-guide',
+    ],
+    body: [
+      {
+        heading: 'Interrupted cutscenes can be replayed',
+        paragraphs: [
+          'Closing the game or crashing during a cutscene should no longer permanently block that event. The related cutscene-triggered achievement can now be obtained after replaying the event on the current build.',
+          'Load the affected save after updating and re-enter the event through its normal trigger. Do not erase the save before checking whether the cutscene and achievement are restored.',
+        ],
+      },
+      {
+        heading: 'Ovid rescue no longer advances the main timer',
+        paragraphs: [
+          'Spending more than five minutes in Ovid’s Poet Rescue encounter previously allowed the main level timer to continue. That could produce overlapping Ovid’s Cocoon and Scarmiglione encounters.',
+          'Version 0.2.36 stops that timer interaction. Finish the rescue normally and verify that only the expected encounter is active before continuing the level.',
+        ],
+        bullets: [
+          'Update before loading a save near Ovid’s rescue.',
+          'Replay interrupted cutscenes from their intended trigger.',
+          'Report remaining overlap with the save state and encounter order.',
+        ],
+      },
+      {
+        heading: 'Texture memory optimization and next update',
+        paragraphs: [
+          'The patch improves texture memory use across multiple assets. This can help stability, but the notes do not promise a specific frame-rate or VRAM reduction.',
+          'The developer also says hotfix frequency will slow as the team returns to the next content update. Treat roadmap features as future work until a release note marks them live.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What does Hell Maiden 0.2.36 fix?',
+        answer:
+          'It restores interrupted cutscene replay and achievements, fixes the Ovid rescue timer overlap and improves texture memory use.',
+      },
+      {
+        question: 'Can I recover a missed cutscene achievement?',
+        answer:
+          'The official notes say interrupted events can be rewatched and their cutscene-triggered achievements acquired after updating.',
+      },
+      {
+        question: 'Is the next content update live?',
+        answer:
+          'No. The developer says attention is shifting toward it, but Hot Fix 0.2.36 is still a stability update.',
+      },
+    ],
+  },
   {
     slug: 'hotfix-0-2-32-cloud-save-achievements',
     path: '/guides/hotfix-0-2-32-cloud-save-achievements',
