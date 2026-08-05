@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-03';
+const checkedAt = '2026-08-04';
 
 function localVideo(
   id: string,
