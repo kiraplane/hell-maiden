@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-08-13';
+export const checkedAt = '2026-08-15';
 
 export const siteFacts = {
   siteName: 'Hell Maiden Wiki',
@@ -64,6 +64,14 @@ export const gameFacts: GameFact[] = [
 ];
 
 export const sources: DataSource[] = [
+  {
+    type: 'official',
+    label: 'Hot Fix Patch 9 (v0.2.39)',
+    url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183779835',
+    checkedAt,
+    confidence: 'high',
+    note: 'Primary August 14 source for restored controller input after window focus changes and general audio resource optimization.',
+  },
   {
     type: 'official',
     label: 'Hot Fix Patch 3 (v0.2.33)',

@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-13';
+const checkedAt = '2026-08-15';
 
 function localVideo(
   id: string,
@@ -90,6 +90,80 @@ const videos = {
 } as const;
 
 export const guides: Guide[] = [
+  {
+    slug: 'hotfix-0-2-39-controller-audio-fixes',
+    path: '/guides/hotfix-0-2-39-controller-audio-fixes',
+    title: 'Hell Maiden Hot Fix 0.2.39',
+    seoTitle: 'Hell Maiden 0.2.39 - Controller & Audio Fixes',
+    seoDescription:
+      'Review Hell Maiden 0.2.39 fixes for controller input after Alt-Tab and the latest audio resource optimization.',
+    summary:
+      'Hot Fix 0.2.39 restores controller input after unfocusing and refocusing the game window and removes unnecessary audio resources to reduce consumption.',
+    category: 'Status',
+    difficulty: 'Status',
+    coverImageUrl: '/hell-maiden/guides/release.jpg',
+    publishedAt: '2026-08-15',
+    updatedAt: '2026-08-15',
+    sourceStrategy: 'official',
+    sourceNotes:
+      'Summarized from the official Steam Hot Fix Patch 9 notes for v0.2.39, published August 14.',
+    videoSearchQueries: [
+      'Hell Maiden 0.2.39',
+      'Hell Maiden controller Alt Tab fix',
+    ],
+    tags: ['Hotfix', 'Controller', 'Audio'],
+    relatedRoutes: [
+      '/guides/hotfix-0-2-37-minos-level-up-menu',
+      '/guides/controls-and-first-run-tips',
+      '/guides/steam-deck',
+      '/guides/beginner-guide',
+    ],
+    body: [
+      {
+        heading: 'Controller input now survives focus changes',
+        paragraphs: [
+          'Version 0.2.39 fixes a bug that could disable controller input after the Hell Maiden window lost focus and then became active again. Update before changing controller profiles or assuming that the device has disconnected permanently.',
+          'To verify the fix, pause in a safe menu, switch to another application, return to the game, and test menu navigation before resuming the run. The earlier 0.2.37 patch removed automatic pausing on Alt-Tab, so pause manually before switching windows even though controller input should now recover correctly.',
+        ],
+        bullets: [
+          'Install 0.2.39 and restart Steam and the game.',
+          'Pause manually before Alt-Tab because focus loss no longer pauses gameplay.',
+          'Retest menu navigation and one movement action before changing bindings.',
+        ],
+      },
+      {
+        heading: 'What to try if input still does not return',
+        paragraphs: [
+          'Confirm that the controller still appears in Steam Input, reconnect it once, and reopen the current binding screen. Test without a second controller or remapping utility so there is only one input layer to diagnose. Include the controller model, wired or wireless connection, Steam Input state, and exact focus-switch sequence in a bug report.',
+          'The official note targets the unfocus-and-refocus failure specifically. It does not claim to fix every device, Bluetooth, overlay, or third-party remapper issue. Keep those separate when deciding whether the patch solved the original problem.',
+        ],
+      },
+      {
+        heading: 'Audio optimization is a resource change',
+        paragraphs: [
+          'The patch also removes unnecessary audio items from the application to reduce resource consumption. Treat this as a general optimization rather than a promised frame-rate, file-size, or memory figure; the official notes do not provide a measured percentage.',
+          'If audio or stability was the problem, compare the same room, enemy wave, and output device before and after the update. Record the build number and symptoms instead of mixing the result with unrelated graphics changes.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What does Hell Maiden 0.2.39 fix?',
+        answer:
+          'It restores controller input after the game window loses and regains focus and removes unnecessary audio resources.',
+      },
+      {
+        question: 'Does Hell Maiden pause when I Alt-Tab?',
+        answer:
+          'No. Automatic focus-loss pausing was removed in 0.2.37, so pause manually before switching applications.',
+      },
+      {
+        question: 'Does 0.2.39 change card balance?',
+        answer:
+          'No card or combat balance changes are listed in the official Hot Fix Patch 9 notes.',
+      },
+    ],
+  },
   {
     slug: 'hotfix-0-2-37-minos-level-up-menu',
     path: '/guides/hotfix-0-2-37-minos-level-up-menu',
