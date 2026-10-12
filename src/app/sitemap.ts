@@ -15,7 +15,7 @@ const coreRoutes = [
 const allRoutes = [
   ...new Set([...coreRoutes, ...guides.map((guide) => guide.path)]),
 ];
-const stableLastModified = new Date('2026-09-15T00:00:00.000Z');
+const stableLastModified = new Date('2026-10-12T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getCanonicalBaseUrl();
